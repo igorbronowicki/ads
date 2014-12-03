@@ -5,7 +5,6 @@ var config = {
         'jquery': 'libs/jquery',
         'underscore': 'libs/underscore',
         'backbone': 'libs/backbone',
-        'mustache': 'libs/mustache',
         'text': 'libs/require.text',
         'doT': 'libs/doT.min'
     },
