@@ -50,7 +50,7 @@ var listView = Backbone.View.extend({
     events: {
         "click .dro"       : "testClick"
     },
-    el: '#list',
+    el: $('#list'),
     template: $('#tpl-cat-detail').html(),
     render: function() {
         this.$el.html(doT.template(this.template, {
