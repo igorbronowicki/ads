@@ -52,12 +52,14 @@
             "click .dro": "testClick"
         },
         el:'#list',
+        data:catCollection.toJSON(),
         template: doT.template($('#tpl-cat-detail').html()),
         render: function() {
-            this.$el.html(this.template, {
-                cats: catCollection.toJSON()
-            });
-            return this;
+            var tmpl = '';
+            for (var i = 0; i < this.data.length; i++) {
+                tmpl += this.template(this.data[i]);
+            }
+            this.$el.html(tmpl);
         },
         testClick: function() {
             alert('testClick');
