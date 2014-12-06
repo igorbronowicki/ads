@@ -10,35 +10,32 @@
 
     <!-- JavaScript -->
     <script src="js/libs/jquery.js"></script>
-
+    <script src="js/libs/mustache.js"></script>
     <script src="js/libs/underscore.js"></script>
-    <script src="js/libs/backbone.js"></script>
     <script src="js/libs/doT.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/libs/backbone.js"></script>
+
+
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 
-
-<script id="tpl-cats" type="text/template">
- <h1>Welcome to the Cat Cooking site!</h1>
- <ul id="list">
- <!-- This area will be filled by JavaScript -->
+<h1>Welcome to the Cat Cooking site!</h1>
+<ul id="list">
+<!-- This area will be filled by JavaScript -->
 </ul>
-</script>
 
-
-<script id="tpl-cat-detail" type="text/template">
+<script id="tpl-cat-detail" type="text/x-dot-template">
     <li>
-        <h2>{{title}}</h2>
-        <img src="{{imageSrc}}" alt="{{title}}"/>
-        <p>{{description}}</p>
-        <p>{{price}}</p>
+        <h2>{{=it.title}}</h2>
+        <img src="{{=it.imageSrc}}" alt="{{=it.title}}"/>
+        <p>{{=it.description || 'vvv'}}</p>
+        <p>{{=it.price}}</p>
     </li>
 </script>
 
-
+<script src="js/index.js"></script>
 </body>
 </html>
