@@ -17,13 +17,7 @@
 
     var catCollection = new listCollection([
         {
-            'title': 'Boiled Cat with cheese',
-            'description':  "eww eq qw eqwfvxcxcvxcv eqw qw eqw eqw",
-            'imageSrc':'img/cat_1.jpg',
-            'price': 543
-        },
-        {
-            'title': 'Fryed Cat',
+            'title': 'Cat Chips',
             'description':  "eww equiouououiouiouiw eqw qw eqw eqw",
             'imageSrc':'img/cat_2.jpg',
             'price': 4
@@ -31,15 +25,22 @@
         {
             'title': 'Fresh cat with mashrooms',
             'description':  "ewwvvbcvbbcvbcvbcvcvbqw eqw eqw qw eqw eqw",
-            'imageSrc':'img/cat_1.jpg',
+            'imageSrc':'img/cat_3.jpg',
             'price': 7
         },
         {
-            'title': 'Sweet cat under chocolate',
-            'imageSrc':'img/cat_2.jpg',
+            'title': 'Sweet cat salad with tomatos',
+            'imageSrc':'img/cat_1.jpg',
             'description':  "werasdsdsdfdsfqw eqw eqw qw eqw eqw",
             'price': 776
+        },
+        {
+            'title': 'Microwaved Cat with cheese',
+            'description':  "eww eq qw eqwfvxcxcvxcv eqw qw eqw eqw",
+            'imageSrc':'img/cat_4.jpg',
+            'price': 543
         }
+
     ]);
 
 
