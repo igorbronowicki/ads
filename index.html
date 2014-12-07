@@ -7,7 +7,7 @@
     <title>Bakbone test</title>
     <!--  CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="css/styles.css">
     <!-- JavaScript -->
     <script src="js/libs/jquery.js"></script>
     <script src="js/libs/mustache.js"></script>
@@ -21,19 +21,26 @@
 </head>
 <body>
 
-
-<h1>Welcome to the Cat Cooking site!</h1>
-<ul id="list">
-<!-- This area will be filled by JavaScript -->
-</ul>
+<div class="container">
+    <h1 class="col-lg-12">Welcome to the Cat Cooking site!</h1>
+    <div id="list">
+        <!-- This area will be filled by JavaScript -->
+    </div>
+</div>
 
 <script id="tpl-cat-detail" type="text/x-dot-template">
-    <li>
-        <h2>{{=it.title}}</h2>
-        <img src="{{=it.imageSrc}}" alt="{{=it.title}}"/>
-        <p>{{=it.description || 'description'}}</p>
-        <p>{{=it.price}}</p>
-    </li>
+        <div class="row bordered-block">
+            <div class="col-lg-5"><img class="img-circle" src="{{=it.imageSrc}}" alt="{{=it.title}}" width="200" height="200"/></div>
+            <div class="col-lg-5">
+                <h2>{{=it.title}}</h2>
+                <dl class="dl-horizontal">
+                    <dt>Description</dt>
+                    <dd>{{=it.description || 'description'}}</dd>
+                    <dt>Price</dt>
+                    <dd>{{=it.price}}</dd>
+                </dl>
+            </div>
+        </div>
 </script>
 
 <script src="js/index.js"></script>
