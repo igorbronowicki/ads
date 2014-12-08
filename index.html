@@ -14,10 +14,10 @@
     <script src="js/libs/underscore.js"></script>
     <script src="js/libs/doT.js"></script>
     <script src="js/libs/backbone.js"></script>
-
-
-
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+
+
 </head>
 <body>
 
@@ -29,20 +29,23 @@
 </div>
 
 <script id="tpl-cat-detail" type="text/x-dot-template">
-        <div class="row bordered-block">
-            <div class="col-lg-5"><img class="img-circle" src="{{=it.imageSrc}}" alt="{{=it.title}}" width="200" height="200"/></div>
+    {{~it.ads:value:index}}
+        <div class="row bordered-block list-item" data-item-id="{{=value.id}}">
+            <div class="col-lg-5"><img class="img-circle" src="{{=value.imageSrc}}" alt="{{=value.title}}" width="200" height="200"/></div>
             <div class="col-lg-5">
-                <h2>{{=it.title}}</h2>
+                <h2>{{=value.title}}</h2>
                 <dl class="dl-horizontal">
                     <dt>Description</dt>
-                    <dd>{{=it.description || 'description'}}</dd>
+                    <dd>{{=value.description}}</dd>
                     <dt>Price</dt>
-                    <dd>{{=it.price}}</dd>
+                    <dd>{{=value.price}}</dd>
                 </dl>
+                <button class="close">Remove</button>
             </div>
         </div>
+    {{~}}
 </script>
 
-<script src="js/index.js"></script>
+
 </body>
 </html>
